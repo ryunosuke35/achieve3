@@ -35,12 +35,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
-
 gem 'dotenv-rails' # 開発環境で環境変数を操作するのに必要
 gem 'unicorn' # アプリケーションサーバのunicorn
-gem 'mini_racer', '0.4.0', platforms: [:ruby] # デプロイ時に必要
-
+gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,9 +48,8 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
-
-  # gem 'ed25519'
-  # gem 'bcrypt_pbkdf'
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
 end
 
 group :development do
